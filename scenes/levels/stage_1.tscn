@@ -1,10 +1,10 @@
 [gd_scene load_steps=19 format=3 uid="uid://c0ildia2t3p10"]
 
-[ext_resource type="PackedScene" uid="uid://caiehwkd44ot4" path="res://scenes/bario.tscn" id="1_cfxkj"]
+[ext_resource type="PackedScene" uid="uid://caiehwkd44ot4" path="res://scenes/characters/bario.tscn" id="1_cfxkj"]
 [ext_resource type="Texture2D" uid="uid://d0vfrpajf4jfr" path="res://assets/terrain/world_tileset.png" id="2_1h7j3"]
 [ext_resource type="PackedScene" uid="uid://b3vq5thgbx3fh" path="res://scenes/platforms/grass_platform.tscn" id="3_x1ne7"]
 [ext_resource type="AudioStream" uid="uid://bepib7hqokuhg" path="res://assets/musics/MARIO THEMESONG FAIL RECORDER COVER.mp3" id="4_yfmq5"]
-[ext_resource type="PackedScene" uid="uid://c6ft30be76y7n" path="res://scenes/chromosome.tscn" id="5_01pcb"]
+[ext_resource type="PackedScene" uid="uid://c6ft30be76y7n" path="res://scenes/pickables/chromosome.tscn" id="5_01pcb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tj6at"]
 texture = ExtResource("2_1h7j3")
@@ -638,6 +638,21 @@ _data = {
 "move": SubResource("Animation_0gg5m")
 }
 
+[sub_resource type="Animation" id="Animation_75vbu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(66, -191)]
+}
+
 [sub_resource type="Animation" id="Animation_21jlc"]
 resource_name = "move"
 loop_mode = 2
@@ -652,21 +667,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(27, -127), Vector2(66, -191)]
-}
-
-[sub_resource type="Animation" id="Animation_75vbu"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(66, -191)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4i6pj"]
@@ -732,4 +732,3 @@ libraries = {
 autoplay = "move"
 
 [node name="chromosome" parent="." instance=ExtResource("5_01pcb")]
-rotation = 6.28319
