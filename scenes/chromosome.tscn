@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6ft30be76y7n"]
+
+[ext_resource type="Texture2D" uid="uid://bojhp66115hia" path="res://assets/pickable/icons8-dna-40.png" id="1_67tmp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j5lks"]
+radius = 4.0
+
+[sub_resource type="Animation" id="Animation_oaldh"]
+resource_name = "rotating_chromosome"
+
+[sub_resource type="Animation" id="Animation_6px68"]
+resource_name = "rotating"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_sp4xx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l5u8h"]
+_data = {
+"RESET": SubResource("Animation_sp4xx"),
+"rotating": SubResource("Animation_6px68"),
+"rotating_chromosome": SubResource("Animation_oaldh")
+}
+
+[node name="chromosome" type="Area2D"]
+position = Vector2(-3335, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -9.53674e-07)
+scale = Vector2(0.325, 0.325)
+texture = ExtResource("1_67tmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_j5lks")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_l5u8h")
+}
+autoplay = "rotating"
