@@ -5,13 +5,11 @@ const SPEED = 100
 const JUMP_VELOCITY = -300.0
 @onready var animation = $animated_sprite
 var dir = "Right"
-@onready var walk_timer = $move_timer
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 ###### FUNDAMENTAL MECHANICS ######
 func update_animation():
-	#walk_timer.start()
 	if velocity:
 		if velocity.x > 0: dir = "Right"
 		elif velocity.x < 0: dir = "Left"
