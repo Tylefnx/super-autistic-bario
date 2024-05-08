@@ -1,3 +1,2 @@
-res://scenes/levels/stage_1.tscn
-res://scripts/bario.gd
 res://scenes/bario.tscn
+res://scripts/bario.gd
