@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmtve6rm7ww2"
-path="res://.godot/imported/10.png-b355812ba8845a7cbbd4bae11bd4f85c.ctex"
+uid="uid://bojhp66115hia"
+path="res://.godot/imported/icons8-dna-40.png-1e0a93f1ebb81d94b52e8943f1ad8d46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/elf_king/jump/10.png"
-dest_files=["res://.godot/imported/10.png-b355812ba8845a7cbbd4bae11bd4f85c.ctex"]
+source_file="res://assets/pickable/icons8-dna-40.png"
+dest_files=["res://.godot/imported/icons8-dna-40.png-1e0a93f1ebb81d94b52e8943f1ad8d46.ctex"]
 
 [params]
 

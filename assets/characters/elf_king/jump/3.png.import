@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3ffun5q8grcj"
-path="res://.godot/imported/3.png-3e5910bd8ef7a7926dd04da7a2f90789.ctex"
+path="res://.godot/imported/3.png-66dffd9cdb34f008f470c88216b93ff5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Elf king/jump/3.png"
-dest_files=["res://.godot/imported/3.png-3e5910bd8ef7a7926dd04da7a2f90789.ctex"]
+source_file="res://assets/characters/elf_king/jump/3.png"
+dest_files=["res://.godot/imported/3.png-66dffd9cdb34f008f470c88216b93ff5.ctex"]
 
 [params]
 

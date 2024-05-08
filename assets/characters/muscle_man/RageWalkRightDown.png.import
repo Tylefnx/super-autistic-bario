@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cxpdwwlbku0nn"
-path="res://.godot/imported/RageWalkRightDown.png-03089b1bbdb33b51009a6a6998bf9dd6.ctex"
+path="res://.godot/imported/RageWalkRightDown.png-eca9de3d728aafdb01f7bfe2ef3ba9cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/EvenStrongerNormalGuy/RageWalkRightDown.png"
-dest_files=["res://.godot/imported/RageWalkRightDown.png-03089b1bbdb33b51009a6a6998bf9dd6.ctex"]
+source_file="res://assets/characters/muscle_man/RageWalkRightDown.png"
+dest_files=["res://.godot/imported/RageWalkRightDown.png-eca9de3d728aafdb01f7bfe2ef3ba9cf.ctex"]
 
 [params]
 

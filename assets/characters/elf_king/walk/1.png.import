@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkbfepxpgvoo8"
-path="res://.godot/imported/1.png-6342bd30382c7f0f98100cd2c24b6f2c.ctex"
+path="res://.godot/imported/1.png-793d325d4eb09901b9f1458f5d3478d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Elf king/walk/1.png"
-dest_files=["res://.godot/imported/1.png-6342bd30382c7f0f98100cd2c24b6f2c.ctex"]
+source_file="res://assets/characters/elf_king/walk/1.png"
+dest_files=["res://.godot/imported/1.png-793d325d4eb09901b9f1458f5d3478d7.ctex"]
 
 [params]
 

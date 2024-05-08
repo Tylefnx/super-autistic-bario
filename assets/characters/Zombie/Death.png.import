@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6261jm7al27l"
-path="res://.godot/imported/Death.png-61fbeedfada606dcf0fe440a0cbd94f2.ctex"
+path="res://.godot/imported/Death.png-4cad29c24dbe18b24f0831eb4ff0528c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/Apocalypse Character Pack/Zombie/Death.png"
-dest_files=["res://.godot/imported/Death.png-61fbeedfada606dcf0fe440a0cbd94f2.ctex"]
+source_file="res://assets/characters/Zombie/Death.png"
+dest_files=["res://.godot/imported/Death.png-4cad29c24dbe18b24f0831eb4ff0528c.ctex"]
 
 [params]
 

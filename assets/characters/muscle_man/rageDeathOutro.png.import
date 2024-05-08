@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wbvn40b4fuba"
-path="res://.godot/imported/rageDeathOutro.png-343661081a9bf558f56fb55de72af805.ctex"
+path="res://.godot/imported/rageDeathOutro.png-a0fb6cbfa168dfe0b4f7b1e7da71984c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/EvenStrongerNormalGuy/rageDeathOutro.png"
-dest_files=["res://.godot/imported/rageDeathOutro.png-343661081a9bf558f56fb55de72af805.ctex"]
+source_file="res://assets/characters/muscle_man/rageDeathOutro.png"
+dest_files=["res://.godot/imported/rageDeathOutro.png-a0fb6cbfa168dfe0b4f7b1e7da71984c.ctex"]
 
 [params]
 
