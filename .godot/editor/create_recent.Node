@@ -1,3 +1,4 @@
+CharacterBody2D
 Area2D
 NavigationAgent2D
 RayCast2D

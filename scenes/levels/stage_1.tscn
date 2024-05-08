@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://c0ildia2t3p10"]
+[gd_scene load_steps=20 format=3 uid="uid://c0ildia2t3p10"]
 
 [ext_resource type="PackedScene" uid="uid://caiehwkd44ot4" path="res://scenes/characters/bario.tscn" id="1_cfxkj"]
 [ext_resource type="Texture2D" uid="uid://d0vfrpajf4jfr" path="res://assets/terrain/world_tileset.png" id="2_1h7j3"]
 [ext_resource type="PackedScene" uid="uid://b3vq5thgbx3fh" path="res://scenes/platforms/grass_platform.tscn" id="3_x1ne7"]
 [ext_resource type="AudioStream" uid="uid://bepib7hqokuhg" path="res://assets/musics/MARIO THEMESONG FAIL RECORDER COVER.mp3" id="4_yfmq5"]
 [ext_resource type="PackedScene" uid="uid://c6ft30be76y7n" path="res://scenes/pickables/chromosome.tscn" id="5_01pcb"]
+[ext_resource type="PackedScene" uid="uid://bujusctr2j4v5" path="res://scenes/characters/zombie.tscn" id="6_qanud"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tj6at"]
 texture = ExtResource("2_1h7j3")
@@ -732,3 +733,6 @@ libraries = {
 autoplay = "move"
 
 [node name="chromosome" parent="." instance=ExtResource("5_01pcb")]
+
+[node name="zombie" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3827, -121)
