@@ -12,4 +12,3 @@ AnimationTree
 CollisionShape2D
 Area2D
 CharacterBody2D
-TileMap

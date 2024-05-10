@@ -1,9 +1,11 @@
-[gd_scene load_steps=44 format=3 uid="uid://cxiogrl13hiai"]
+[gd_scene load_steps=61 format=3 uid="uid://cxiogrl13hiai"]
 
 [ext_resource type="Texture2D" uid="uid://d0vfrpajf4jfr" path="res://assets/terrain/world_tileset.png" id="1_d5yxw"]
 [ext_resource type="Script" path="res://scripts/intro.gd" id="1_tjbml"]
 [ext_resource type="Texture2D" uid="uid://ga7h0y7f3ei7" path="res://assets/characters/muscle_man/RageTransformation.png" id="2_o3dke"]
+[ext_resource type="Texture2D" uid="uid://bavjmacfsb7p2" path="res://assets/characters/muscle_man/RageHitRightFront.png" id="3_4jbek"]
 [ext_resource type="PackedScene" uid="uid://caiehwkd44ot4" path="res://scenes/characters/bario.tscn" id="3_4uc8s"]
+[ext_resource type="Texture2D" uid="uid://b4ao6eviv6mu" path="res://assets/characters/muscle_man/RageWalk.png" id="3_hnvbn"]
 [ext_resource type="FontFile" uid="uid://b64gdmnwdocqu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_4j0gy"]
 [ext_resource type="FontFile" uid="uid://ybtofid14i5j" path="res://assets/fonts/PixelOperator8.ttf" id="6_65ybt"]
 
@@ -400,6 +402,66 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 5
 sources/0 = SubResource("TileSetAtlasSource_wphs8")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qoee"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(0, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j8a2b"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(100, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j70qe"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(50, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs78g"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(0, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f3osf"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(100, 100, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0escf"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(0, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1e3r"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(50, 150, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v545x"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nw644"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(50, 50, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mc2cd"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdg6j"]
+atlas = ExtResource("3_4jbek")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iiew0"]
+atlas = ExtResource("3_hnvbn")
+region = Rect2(0, 80, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6tpn"]
+atlas = ExtResource("3_hnvbn")
+region = Rect2(40, 80, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3ci0"]
+atlas = ExtResource("3_hnvbn")
+region = Rect2(80, 80, 40, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3mc7"]
+atlas = ExtResource("3_hnvbn")
+region = Rect2(120, 80, 40, 40)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dpuw8"]
 atlas = ExtResource("2_o3dke")
 region = Rect2(0, 0, 40, 40)
@@ -456,20 +518,63 @@ region = Rect2(0, 120, 40, 40)
 atlas = ExtResource("2_o3dke")
 region = Rect2(40, 120, 40, 40)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_34ui7"]
-atlas = ExtResource("2_o3dke")
-region = Rect2(80, 120, 40, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s2pxg"]
-atlas = ExtResource("2_o3dke")
-region = Rect2(120, 120, 40, 40)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ya5ht"]
-atlas = ExtResource("2_o3dke")
-region = Rect2(0, 160, 40, 40)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_5cvmt"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qoee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j8a2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j70qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bs78g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f3osf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0escf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1e3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v545x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nw644")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mc2cd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kdg6j")
+}],
+"loop": false,
+"name": &"hot",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iiew0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6tpn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3ci0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3mc7")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dpuw8")
@@ -512,15 +617,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uauek")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_34ui7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s2pxg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ya5ht")
 }],
 "loop": false,
 "name": &"transformation",
@@ -529,6 +625,42 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qe0ss"]
 radius = 8.0
+
+[sub_resource type="Animation" id="Animation_yfona"]
+resource_name = "run and hit"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6, -1), Vector2(-12, -1)]
+}
+
+[sub_resource type="Animation" id="Animation_qeek7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-12, -1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oapcf"]
+_data = {
+"RESET": SubResource("Animation_qeek7"),
+"run and hit": SubResource("Animation_yfona")
+}
 
 [sub_resource type="LabelSettings" id="LabelSettings_bghqe"]
 font = ExtResource("5_4j0gy")
@@ -880,17 +1012,26 @@ position = Vector2(-26, -20)
 zoom = Vector2(2, 2)
 
 [node name="muscle_man" type="CharacterBody2D" parent="."]
-position = Vector2(6, -1)
+position = Vector2(-12, -1)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="muscle_man"]
-position = Vector2(83, -16)
+position = Vector2(87, -16)
 sprite_frames = SubResource("SpriteFrames_5cvmt")
-animation = &"transformation"
+animation = &"hot"
+frame = 10
+frame_progress = 1.0
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="muscle_man"]
 position = Vector2(83, -11)
 shape = SubResource("CircleShape2D_qe0ss")
+
+[node name="hit_and_run" type="AnimationPlayer" parent="muscle_man"]
+libraries = {
+"": SubResource("AnimationLibrary_oapcf")
+}
+
+[node name="run_timer" type="Timer" parent="muscle_man"]
 
 [node name="bario" parent="." instance=ExtResource("3_4uc8s")]
 position = Vector2(-120, -1)
@@ -942,8 +1083,8 @@ text = "Bario: aYe b0ss ! habe you seen \"The Holy Chromosome?\""
 label_settings = SubResource("LabelSettings_q4b45")
 horizontal_alignment = 1
 vertical_alignment = 1
-visible_characters = 6
-visible_ratio = 0.128788
+visible_characters = 17
+visible_ratio = 0.314815
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Panel/Label"]
 libraries = {
@@ -956,3 +1097,4 @@ wait_time = 5.503
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="timeout" from="muscle_man/run_timer" to="." method="_on_run_timer_timeout"]
