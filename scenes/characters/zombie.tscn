@@ -1,11 +1,40 @@
-[gd_scene load_steps=37 format=3 uid="uid://bujusctr2j4v5"]
+[gd_scene load_steps=45 format=3 uid="uid://bujusctr2j4v5"]
 
 [ext_resource type="Script" path="res://scripts/characters/zombie.gd" id="1_n65k1"]
 [ext_resource type="Texture2D" uid="uid://yktwji456sll" path="res://assets/characters/Zombie/Walk.png" id="1_pxjom"]
 [ext_resource type="Texture2D" uid="uid://b8aucgq4bw04m" path="res://assets/characters/Zombie/Idle.png" id="2_vsn30"]
+[ext_resource type="Texture2D" uid="uid://6261jm7al27l" path="res://assets/characters/Zombie/Death.png" id="2_yna72"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h028k"]
 size = Vector2(11, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_upkm7"]
+atlas = ExtResource("2_yna72")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_af4ur"]
+atlas = ExtResource("2_yna72")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dw3uq"]
+atlas = ExtResource("2_yna72")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ysjrx"]
+atlas = ExtResource("2_yna72")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58sye"]
+atlas = ExtResource("2_yna72")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_faeb1"]
+atlas = ExtResource("2_yna72")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7hafd"]
+atlas = ExtResource("2_yna72")
+region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h4jyh"]
 atlas = ExtResource("2_vsn30")
@@ -131,6 +160,32 @@ region = Rect2(288, 64, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_upkm7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_af4ur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dw3uq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ysjrx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58sye")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_faeb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7hafd")
+}],
+"loop": false,
+"name": &"death",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_h4jyh")
 }, {
 "duration": 1.0,
@@ -241,7 +296,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8l2c"]
-size = Vector2(17, 24)
+size = Vector2(19, 25)
 
 [node name="zombie" type="CharacterBody2D"]
 collision_layer = 2
@@ -254,8 +309,9 @@ shape = SubResource("RectangleShape2D_h028k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_afuns")
-animation = &"walkRight"
-frame_progress = 0.96384
+animation = &"death"
+frame = 6
+frame_progress = 1.0
 
 [node name="raycast_left" type="RayCast2D" parent="."]
 target_position = Vector2(-12, 1)
@@ -266,7 +322,16 @@ target_position = Vector2(12, 0)
 collision_mask = 9
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1.5, 4)
+position = Vector2(0.5, 3.5)
 shape = SubResource("RectangleShape2D_b8l2c")
+
+[node name="death_timer" type="Timer" parent="."]
+wait_time = 0.494
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="death_timer" to="." method="_on_death_timer_timeout"]

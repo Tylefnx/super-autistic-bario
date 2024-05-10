@@ -1,6 +1,6 @@
+Timer
 CollisionShape2D
 Area2D
-Timer
 TileMap
 RayCast2D
 CharacterBody2D

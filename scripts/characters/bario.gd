@@ -35,7 +35,9 @@ func walk():
 func attack(body):
 	if body.name == "zombie":
 		if Input.is_action_just_pressed("attack") and barioCanAttack:
-		
+			if body.has_meta("health"):
+				body.health -= 1
+			
 
 func death():
 	if health <= 0 or position.y > 300:
