@@ -50,8 +50,11 @@ func death():
 			await death_timer.timeout
 		
 func update_animation():
-	if bario_dead and not in_dialog:
+	if bario_dead:
+		print("bairo dead")
 		animation.play("death")
+	elif in_dialog:
+		animation.play("idleRight")
 	else:
 		if Input.is_action_just_pressed("attack") and not pressed_attack:
 			attack_timer.start()
@@ -71,11 +74,12 @@ func pick_chromosome():
 	chromosomes += 1
 		
 func _physics_process(delta):
-	death()
+	if not in_dialog:
+		death()
+		walk()
+		jump(delta)
+		move_and_slide()
 	update_animation()
-	walk()
-	jump(delta)
-	move_and_slide()
 
 
 

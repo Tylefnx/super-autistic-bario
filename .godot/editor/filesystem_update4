@@ -1,8 +1,5 @@
 res://scenes/levels/intro.tscn
-res://scripts/characters/bario.gd
 res://scenes/levels/stage_1.tscn
 res://scenes/characters/bario.tscn
-res://scenes/pickables/chromosome.tscn
-res://scenes/chromosome_counter.tscn
-res://scripts/chromosome_counter.gd
+res://scripts/characters/bario.gd
 res://scripts/intro.gd
