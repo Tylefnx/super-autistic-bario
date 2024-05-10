@@ -2,7 +2,6 @@ extends Area2D
 
 @onready var chromosome = $Area2D
 
-
 func _process(delta):
 	pass
 

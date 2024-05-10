@@ -17,6 +17,7 @@ var chromosomes = 0
 var enemy_can_attack = false
 var pressed_attack = false
 var bario_dead = false
+var in_dialog = false
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 

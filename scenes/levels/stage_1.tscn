@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://c0ildia2t3p10"]
+[gd_scene load_steps=23 format=3 uid="uid://c0ildia2t3p10"]
 
 [ext_resource type="PackedScene" uid="uid://caiehwkd44ot4" path="res://scenes/characters/bario.tscn" id="1_cfxkj"]
+[ext_resource type="PackedScene" uid="uid://crqm2487sjuom" path="res://scenes/chromosome_counter.tscn" id="1_molyp"]
 [ext_resource type="Texture2D" uid="uid://d0vfrpajf4jfr" path="res://assets/terrain/world_tileset.png" id="2_1h7j3"]
 [ext_resource type="PackedScene" uid="uid://b3vq5thgbx3fh" path="res://scenes/platforms/grass_platform.tscn" id="3_x1ne7"]
 [ext_resource type="AudioStream" uid="uid://bepib7hqokuhg" path="res://assets/musics/MARIO THEMESONG FAIL RECORDER COVER.mp3" id="4_yfmq5"]
@@ -1069,12 +1070,50 @@ sources/0 = SubResource("TileSetAtlasSource_44ukl")
 
 [node name="stage1" type="Node2D"]
 
+[node name="hud" type="CanvasLayer" parent="."]
+layer = 0
+offset = Vector2(10, 10)
+transform = Transform2D(1, 0, 0, 1, 10, 10)
+
+[node name="Control" type="Control" parent="hud"]
+layout_mode = 3
+anchor_left = -0.117
+anchor_right = -0.117
+offset_left = 134.784
+offset_right = 174.784
+offset_bottom = 40.0
+
+[node name="chr2" type="Panel" parent="hud/Control"]
+self_modulate = Color(1, 1, 1, 0.356863)
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -36.0
+offset_top = 2.0
+offset_right = 211.0
+offset_bottom = 83.0
+grow_horizontal = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="chromosome_counter" parent="hud/Control/chr2" instance=ExtResource("1_molyp")]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 29.0
+offset_right = 155.0
+offset_bottom = 62.0
+
+[node name="chromosome" parent="hud/Control/chr2" instance=ExtResource("5_01pcb")]
+position = Vector2(-3691.17, -77.3891)
+
 [node name="bario" parent="." instance=ExtResource("1_cfxkj")]
 z_index = 10
 position = Vector2(-4015, -386)
 
 [node name="Camera2D" type="Camera2D" parent="bario"]
-position = Vector2(0, -14)
+position = Vector2(5, -15)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
@@ -1126,6 +1165,7 @@ autoplay = "move"
 [node name="chromosome" parent="." instance=ExtResource("5_01pcb")]
 
 [node name="enemy_colliders" type="TileMap" parent="."]
+z_index = -1
 position = Vector2(2, 8)
 tile_set = SubResource("TileSet_jrusp")
 format = 2
@@ -1342,4 +1382,46 @@ position = Vector2(535, -329)
 position = Vector2(-3256, 4)
 
 [node name="chromosome2" parent="." instance=ExtResource("5_01pcb")]
-position = Vector2(-7333, -54)
+position = Vector2(-3959.77, -52.5905)
+
+[node name="chromosome10" parent="." instance=ExtResource("5_01pcb")]
+position = Vector2(-3885.56, -96.6137)
+
+[node name="chromosome9" parent="." instance=ExtResource("5_01pcb")]
+position = Vector2(-3709.48, -82.3329)
+
+[node name="chromosome8" parent="." instance=ExtResource("5_01pcb")]
+position = Vector2(-3906.99, -97.0256)
+
+[node name="chromosome7" parent="." instance=ExtResource("5_01pcb")]
+position = Vector2(-3945.88, -69.2609)
+
+[node name="chromosome4" parent="." instance=ExtResource("5_01pcb")]
+position = Vector2(-3928.42, -86.7197)
+
+[node name="chromosome3" parent="." instance=ExtResource("5_01pcb")]
+position = Vector2(-3645.8, -48.0363)
+
+[node name="chromosome5" parent="." instance=ExtResource("5_01pcb")]
+position = Vector2(-3606.76, -31.6845)
+
+[node name="chromosome" parent="chromosome5" instance=ExtResource("5_01pcb")]
+position = Vector2(128.219, -63.1309)
+
+[node name="chromosome6" parent="." instance=ExtResource("5_01pcb")]
+position = Vector2(-3028, -162)
+
+[node name="chromosome" parent="chromosome6" instance=ExtResource("5_01pcb")]
+position = Vector2(159.999, -160.001)
+
+[node name="chromosome" parent="chromosome6/chromosome" instance=ExtResource("5_01pcb")]
+position = Vector2(328.999, -79.003)
+
+[node name="chromosome" parent="chromosome6/chromosome/chromosome" instance=ExtResource("5_01pcb")]
+position = Vector2(343.002, 112.995)
+
+[node name="chromosome" parent="chromosome6/chromosome/chromosome/chromosome" instance=ExtResource("5_01pcb")]
+position = Vector2(444.868, 143.997)
+
+[node name="chromosome" parent="chromosome6/chromosome/chromosome/chromosome/chromosome" instance=ExtResource("5_01pcb")]
+position = Vector2(65.9596, 30.117)
