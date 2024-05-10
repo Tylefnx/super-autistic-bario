@@ -1,9 +1,9 @@
+CollisionShape2D
+Area2D
 TileMap
 RayCast2D
 CharacterBody2D
-Area2D
 NavigationAgent2D
-CollisionShape2D
 AnimatedSprite2D
 Timer
 AnimationPlayer
