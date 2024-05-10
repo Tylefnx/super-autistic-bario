@@ -5,3 +5,4 @@ res://scenes/characters/bario.tscn
 res://scenes/pickables/chromosome.tscn
 res://scenes/chromosome_counter.tscn
 res://scripts/chromosome_counter.gd
+res://scripts/intro.gd

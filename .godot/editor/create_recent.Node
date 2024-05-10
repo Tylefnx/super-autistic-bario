@@ -1,5 +1,8 @@
+AnimationPlayer
+AnimationTree
 Label
 CollisionShape2D
+Area2D
 AnimatedSprite2D
 CharacterBody2D
 Camera2D
@@ -9,6 +12,3 @@ Panel
 Control
 CanvasLayer
 TextureRect
-Sprite2D
-RichTextLabel
-Area2D
