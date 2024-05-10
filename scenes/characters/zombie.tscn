@@ -160,6 +160,8 @@ animations = [{
 }]
 
 [node name="zombie" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 9
 script = ExtResource("1_n65k1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -172,6 +174,8 @@ animation = &"walk_left"
 
 [node name="raycast_left" type="RayCast2D" parent="."]
 target_position = Vector2(-12, 1)
+collision_mask = 9
 
 [node name="raycast_right" type="RayCast2D" parent="."]
 target_position = Vector2(12, 0)
+collision_mask = 9

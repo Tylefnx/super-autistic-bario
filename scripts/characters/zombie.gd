@@ -10,7 +10,7 @@ var direction = Vector2.RIGHT
 func change_direction():
 	if raycast_left.is_colliding():
 		direction = Vector2.RIGHT
-	elif raycast_left.is_colliding():
+	elif raycast_right.is_colliding():
 		direction = Vector2.LEFT
 
 func _physics_process(delta):
