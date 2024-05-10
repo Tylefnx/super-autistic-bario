@@ -28,7 +28,9 @@ func walk():
 func attack():
 	pass
 func death():
-	self.queue_free()
+	if health <= 0 or position.y > 300:
+		self.queue_free()
+		get_tree().reload_current_scene()
 func update_animation():
 	if velocity.length() == 0 and !isPlayerAttacking: 
 		animation.play("idle"+dir)
@@ -44,6 +46,7 @@ func update_animation():
 		elif velocity.x < 0: dir = "Left"
 		animation.play("walk" + dir)
 func _physics_process(delta):
+	death()
 	update_animation()
 	walk()
 	jump(delta)

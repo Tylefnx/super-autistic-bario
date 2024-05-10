@@ -2,3 +2,4 @@ res://scenes/levels/stage_1.tscn
 res://scenes/characters/zombie.tscn
 res://scenes/characters/bario.tscn
 res://scripts/characters/zombie.gd
+res://scripts/characters/bario.gd
