@@ -1,6 +1,6 @@
 extends NinePatchRect
 @onready var label = $Label
-@onready var bario = $"../../../../bario"
+@onready var bario = $"../../../bario"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

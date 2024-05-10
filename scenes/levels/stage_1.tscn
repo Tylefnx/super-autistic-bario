@@ -1075,37 +1075,22 @@ layer = 0
 offset = Vector2(10, 10)
 transform = Transform2D(1, 0, 0, 1, 10, 10)
 
-[node name="Control" type="Control" parent="hud"]
-layout_mode = 3
-anchor_left = -0.117
-anchor_right = -0.117
-offset_left = 134.784
-offset_right = 174.784
-offset_bottom = 40.0
-
-[node name="chr2" type="Panel" parent="hud/Control"]
+[node name="chr2" type="Panel" parent="hud"]
 self_modulate = Color(1, 1, 1, 0.356863)
 texture_filter = 1
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -36.0
-offset_top = 2.0
-offset_right = 211.0
-offset_bottom = 83.0
-grow_horizontal = 0
+offset_right = 247.0
+offset_bottom = 81.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
 
-[node name="chromosome_counter" parent="hud/Control/chr2" instance=ExtResource("1_molyp")]
+[node name="chromosome_counter" parent="hud/chr2" instance=ExtResource("1_molyp")]
 layout_mode = 0
 offset_left = 115.0
 offset_top = 29.0
 offset_right = 155.0
 offset_bottom = 62.0
 
-[node name="chromosome" parent="hud/Control/chr2" instance=ExtResource("5_01pcb")]
+[node name="chromosome" parent="hud/chr2" instance=ExtResource("5_01pcb")]
 position = Vector2(-3691.17, -77.3891)
 
 [node name="bario" parent="." instance=ExtResource("1_cfxkj")]

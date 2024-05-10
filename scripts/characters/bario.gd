@@ -23,12 +23,12 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 ###### FUNDAMENTAL MECHANICS ######
 func jump(delta):
-	if not bario_dead:
+	if not bario_dead and not in_dialog:
 		if not is_on_floor(): velocity.y += gravity * delta
 		if Input.is_action_just_pressed("ui_up") and is_on_floor():
 			velocity.y = JUMP_VELOCITY
 func walk():
-	if not pressed_attack and not bario_dead:
+	if not pressed_attack and not bario_dead and not in_dialog:
 		var direction = Input.get_axis("ui_left", "ui_right")
 		if direction:
 			velocity.x = direction * SPEED
@@ -36,7 +36,7 @@ func walk():
 			animation.play("idle"+dir)
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 func attack(body):
-	if body.name == "zombie":
+	if body.name == "zombie" and not in_dialog:
 		if Input.is_action_just_pressed("attack") and barioCanAttack:
 			if body.has_meta("health"):
 				body.health -= 1
@@ -50,7 +50,7 @@ func death():
 			await death_timer.timeout
 		
 func update_animation():
-	if bario_dead:
+	if bario_dead and not in_dialog:
 		animation.play("death")
 	else:
 		if Input.is_action_just_pressed("attack") and not pressed_attack:
@@ -69,7 +69,6 @@ func update_animation():
 				animation.play("walk" + dir)
 func pick_chromosome():
 	chromosomes += 1
-	print("PICKED UP A CHROMOSOME !!!!")
 		
 func _physics_process(delta):
 	death()
@@ -81,10 +80,9 @@ func _physics_process(delta):
 
 
 func _on_hitbox_body_entered(body):
-	if body.name == "zombie" and not bario_dead:
-		enemy_can_attack = true
-		barioCanAttack = true
-		damage_timer.start()
+	enemy_can_attack = true
+	barioCanAttack = true
+	damage_timer.start()
 
 func _on_hitbox_body_exited(body):
 	enemy_can_attack = false
