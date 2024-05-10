@@ -20,12 +20,13 @@ func jump(delta):
 	if Input.is_action_just_pressed("ui_up") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 func walk():
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		animation.play("idle"+dir)
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	if not isPlayerAttacking:
+		var direction = Input.get_axis("ui_left", "ui_right")
+		if direction:
+			velocity.x = direction * SPEED
+		else:
+			animation.play("idle"+dir)
+			velocity.x = move_toward(velocity.x, 0, SPEED)
 func attack():
 	pass
 func death():
@@ -36,14 +37,14 @@ func update_animation():
 	if health <= 0:
 		animation.play("death")
 	else:
-		if Input.is_action_just_pressed("attack") and !isPlayerAttacking:
+		if Input.is_action_just_pressed("attack") and not isPlayerAttacking:
 			attack_timer.start()
 			isPlayerAttacking = true
 			animation.play("atk"+dir)
 			await attack_timer.timeout
 			isPlayerAttacking = false
 		else:
-			if velocity.length() == 0 and !isPlayerAttacking: 
+			if velocity.length() == 0 and not isPlayerAttacking: 
 				animation.play("idle"+dir)
 			
 			elif velocity and !isPlayerAttacking:
