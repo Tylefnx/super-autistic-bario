@@ -1125,11 +1125,215 @@ autoplay = "move"
 
 [node name="chromosome" parent="." instance=ExtResource("5_01pcb")]
 
-[node name="zombie" parent="." instance=ExtResource("6_qanud")]
-position = Vector2(-3827, -121)
-
-[node name="TileMap" type="TileMap" parent="."]
+[node name="enemy_colliders" type="TileMap" parent="."]
 position = Vector2(2, 8)
 tile_set = SubResource("TileSet_jrusp")
 format = 2
-layer_0/tile_data = PackedInt32Array(-524534, 131072, 9, -458998, 131072, 9, -393462, 131072, 9, -524521, 131072, 9, -458985, 131072, 9, -393449, 131072, 9)
+layer_0/tile_data = PackedInt32Array(-524534, 131072, 9, -458998, 131072, 9, -393462, 131072, 9, -524521, 131072, 9, -458985, 131072, 9, -393449, 131072, 9, -590041, 131072, 9, -524505, 131072, 9, -655571, 131072, 9, -590035, 131072, 9, -524499, 131072, 9, -786632, 131072, 9, -721096, 131072, 9, -721101, 131072, 9, -852159, 131072, 9, -786623, 131072, 9, -852165, 131072, 9, -1441965, 131072, 9, -1441951, 131072, 9, -1376415, 131072, 9, -1441949, 131072, 9, -1376413, 131072, 9, -1441934, 131072, 9, -1376398, 131072, 9, -1310862, 131072, 9, -1310858, 131072, 9, -1245322, 131072, 9, -1179780, 131072, 9, -1114244, 131072, 9, -1179785, 131072, 9, -1048707, 131072, 9, -1114243, 131072, 9, -1048702, 131072, 9, -983166, 131072, 9, -917630, 131072, 9, -917626, 131072, 9, -852090, 131072, 9, -786554, 131072, 9, -721015, 131072, 9, -786551, 131072, 9, -786543, 131072, 9, -721007, 131072, 9, -655471, 131072, 9, -458857, 131072, 9, -393321, 131072, 9, -458852, 131072, 9, -393316, 131072, 9, -458849, 131072, 9, -393313, 131072, 9, -393307, 131072, 9, -327771, 131072, 9, -458843, 131072, 9, -524375, 131072, 9, -458839, 131072, 9, -589908, 131072, 9, -524372, 131072, 9, -655444, 131072, 9, -786511, 131072, 9, -720975, 131072, 9, -786508, 131072, 9, -852044, 131072, 9, -917577, 131072, 9, -852041, 131072, 9, -786505, 131072, 9, -720972, 131072, 9, -655439, 131072, 9, -983110, 131072, 9, -917574, 131072, 9, -983105, 131072, 9, -1048641, 131072, 9, -1048632, 131072, 9, -1114168, 131072, 9, -1114146, 131072, 9, -1048610, 131072, 9, -983066, 131072, 9, -1048602, 131072, 9, -983061, 131072, 9, -917525, 131072, 9, -917522, 131072, 9, -851986, 131072, 9, -786444, 131072, 9, -720908, 131072, 9, -655369, 131072, 9, -655361, 131072, 9, -589825, 131072, 9, -1048572, 131072, 9, -983036, 131072, 9, -1048564, 131072, 9, -983028, 131072, 9, -1310707, 131072, 9, -1245171, 131072, 9, -1310692, 131072, 9, -1245156, 131072, 9, -1441762, 131072, 9, -1376226, 131072, 9, -1441756, 131072, 9, -1376220, 131072, 9, -1704097, 131072, 9, -1638561, 131072, 9, -1704091, 131072, 9, -1638555, 131072, 9, -655565, 131072, 9, -786629, 131072, 9, -721084, 131072, 9, -655548, 131072, 9, -721092, 131072, 9, -721093, 131072, 9, -852038, 131072, 9, -720905, 131072, 805306377, -655372, 131072, 805306377)
+
+[node name="zombie" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3827, -121)
+
+[node name="zombie2" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3784, -120)
+
+[node name="zombie3" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3426, -141)
+
+[node name="zombie4" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3397, -140)
+
+[node name="zombie5" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3329, -153)
+
+[node name="zombie6" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3300, -157)
+
+[node name="zombie7" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3241, -172)
+
+[node name="zombie8" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3215, -175)
+
+[node name="zombie9" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3166, -186)
+
+[node name="zombie10" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3114, -205)
+
+[node name="zombie11" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-3082, -205)
+
+[node name="zombie12" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2734, -351)
+
+[node name="zombie13" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2702, -361)
+
+[node name="zombie14" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2665, -348)
+
+[node name="zombie15" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2633, -351)
+
+[node name="zombie16" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2601, -356)
+
+[node name="zombie17" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2564, -352)
+
+[node name="zombie18" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2519, -410)
+
+[node name="zombie19" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2448, -352)
+
+[node name="zombie20" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2413, -348)
+
+[node name="zombie21" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2375, -355)
+
+[node name="zombie22" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2346, -348)
+
+[node name="zombie23" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2316, -349)
+
+[node name="zombie24" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2290, -351)
+
+[node name="zombie25" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2235, -320)
+
+[node name="zombie26" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2143, -285)
+
+[node name="zombie27" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-2048, -253)
+
+[node name="zombie28" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1976, -223)
+
+[node name="zombie29" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1919, -208)
+
+[node name="zombie30" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1872, -176)
+
+[node name="zombie31" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1836, -174)
+
+[node name="zombie32" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1801, -177)
+
+[node name="zombie33" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1644, -94)
+
+[node name="zombie34" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1566, -106)
+
+[node name="zombie35" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1496, -93)
+
+[node name="zombie36" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1414, -111)
+
+[node name="zombie37" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1358, -126)
+
+[node name="zombie38" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1301, -159)
+
+[node name="zombie39" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1229, -187)
+
+[node name="zombie40" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1180, -206)
+
+[node name="zombie41" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1133, -220)
+
+[node name="zombie42" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-1084, -234)
+
+[node name="zombie43" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-999, -250)
+
+[node name="zombie44" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-963, -250)
+
+[node name="zombie45" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-920, -250)
+
+[node name="zombie46" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-844, -270)
+
+[node name="zombie47" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-807, -270)
+
+[node name="zombie48" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-767, -276)
+
+[node name="zombie49" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-733, -271)
+
+[node name="zombie50" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-699, -264)
+
+[node name="zombie51" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-656, -275)
+
+[node name="zombie52" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-611, -275)
+
+[node name="zombie53" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-573, -275)
+
+[node name="zombie54" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-500, -257)
+
+[node name="zombie55" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-450, -255)
+
+[node name="zombie56" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-366, -238)
+
+[node name="zombie57" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-303, -222)
+
+[node name="zombie58" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-248, -192)
+
+[node name="zombie59" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-212, -192)
+
+[node name="zombie60" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-160, -171)
+
+[node name="zombie61" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-108, -155)
+
+[node name="zombie62" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(-46, -155)
+
+[node name="zombie63" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(105, -234)
+
+[node name="zombie64" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(138, -233)
+
+[node name="zombie65" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(170, -233)
+
+[node name="zombie66" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(248, -301)
+
+[node name="zombie67" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(303, -302)
+
+[node name="zombie68" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(369, -299)
+
+[node name="zombie69" parent="." instance=ExtResource("6_qanud")]
+position = Vector2(535, -329)
