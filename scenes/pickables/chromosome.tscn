@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6ft30be76y7n"]
+[gd_scene load_steps=9 format=3 uid="uid://c6ft30be76y7n"]
 
 [ext_resource type="Texture2D" uid="uid://bojhp66115hia" path="res://assets/pickable/icons8-dna-40.png" id="1_67tmp"]
+[ext_resource type="Script" path="res://scripts/pickables/chromosome.gd" id="1_ntkru"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j5lks"]
 radius = 4.0
@@ -46,9 +47,13 @@ _data = {
 "rotating_chromosome": SubResource("Animation_oaldh")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_82c1t"]
+size = Vector2(12, 11.9999)
+
 [node name="chromosome" type="Area2D"]
 position = Vector2(-3335, 0)
 rotation = 6.28319
+script = ExtResource("1_ntkru")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -9.53674e-07)
@@ -63,3 +68,13 @@ libraries = {
 "": SubResource("AnimationLibrary_l5u8h")
 }
 autoplay = "rotating"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 2.38419e-07)
+shape = SubResource("RectangleShape2D_82c1t")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

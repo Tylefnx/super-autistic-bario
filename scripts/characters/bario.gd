@@ -66,6 +66,10 @@ func update_animation():
 				if velocity.x > 0: dir = "Right"
 				elif velocity.x < 0: dir = "Left"
 				animation.play("walk" + dir)
+func pick_chromosome():
+	chromosomes += 1
+	print("PICKED UP A CHROMOSOME !!!!")
+		
 func _physics_process(delta):
 	death()
 	update_animation()

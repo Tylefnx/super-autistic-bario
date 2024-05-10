@@ -1340,3 +1340,6 @@ position = Vector2(535, -329)
 
 [node name="zombie70" parent="." instance=ExtResource("6_qanud")]
 position = Vector2(-3256, 4)
+
+[node name="chromosome2" parent="." instance=ExtResource("5_01pcb")]
+position = Vector2(-7333, -54)
