@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715308322
+::res://::1715310648
 icon.svg::CompressedTexture2D::3398351224969240999::1715295679::1715295679::1::::<><>::
 ::res://assets/::1715295679
 ::res://assets/brackeys_platformer_assets/::1715295679
@@ -145,16 +145,16 @@ slime_green.png::CompressedTexture2D::6820286291749421987::1715295679::171529567
 slime_purple.png::CompressedTexture2D::9219297618521597050::1715295679::1715295679::1::::<><>::
 world_tileset.png::CompressedTexture2D::8957669806592586679::1715295679::1715295679::1::::<><>::
 ::res://scenes/::1715295679
-::res://scenes/characters/::1715308305
-bario.tscn::PackedScene::4789612929085044467::1715308305::0::1::::<><>::res://scripts/characters/bario.gd<>uid://cxcm02s2ooq3v::::res://assets/characters/bario/Stab.png<>uid://bidijd0ks7pjv::::res://assets/characters/bario/Death.png<>uid://dwh6su7wta02g::::res://assets/characters/bario/Idle.png<>uid://sn3k217kflqb::::res://assets/characters/bario/Walk.png
-zombie.tscn::PackedScene::3810023575592759604::1715308276::0::1::::<><>::res://scripts/characters/zombie.gd<>uid://yktwji456sll::::res://assets/characters/Zombie/Walk.png<>uid://b8aucgq4bw04m::::res://assets/characters/Zombie/Idle.png
-::res://scenes/levels/::1715308185
-stage_1.tscn::PackedScene::6544751146111702457::1715308185::0::1::::<><>::uid://caiehwkd44ot4::::res://scenes/characters/bario.tscn<>uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png<>uid://b3vq5thgbx3fh::::res://scenes/platforms/grass_platform.tscn<>uid://bepib7hqokuhg::::res://assets/musics/MARIO THEMESONG FAIL RECORDER COVER.mp3<>uid://c6ft30be76y7n::::res://scenes/pickables/chromosome.tscn<>uid://bujusctr2j4v5::::res://scenes/characters/zombie.tscn
+::res://scenes/characters/::1715310626
+bario.tscn::PackedScene::4789612929085044467::1715310626::0::1::::<><>::res://scripts/characters/bario.gd<>uid://cxcm02s2ooq3v::::res://assets/characters/bario/Stab.png<>uid://bidijd0ks7pjv::::res://assets/characters/bario/Death.png<>uid://dwh6su7wta02g::::res://assets/characters/bario/Idle.png<>uid://sn3k217kflqb::::res://assets/characters/bario/Walk.png
+zombie.tscn::PackedScene::3810023575592759604::1715310626::0::1::::<><>::res://scripts/characters/zombie.gd<>uid://yktwji456sll::::res://assets/characters/Zombie/Walk.png<>uid://b8aucgq4bw04m::::res://assets/characters/Zombie/Idle.png<>uid://6261jm7al27l::::res://assets/characters/Zombie/Death.png
+::res://scenes/levels/::1715310626
+stage_1.tscn::PackedScene::6544751146111702457::1715310626::0::1::::<><>::uid://caiehwkd44ot4::::res://scenes/characters/bario.tscn<>uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png<>uid://b3vq5thgbx3fh::::res://scenes/platforms/grass_platform.tscn<>uid://bepib7hqokuhg::::res://assets/musics/MARIO THEMESONG FAIL RECORDER COVER.mp3<>uid://c6ft30be76y7n::::res://scenes/pickables/chromosome.tscn<>uid://bujusctr2j4v5::::res://scenes/characters/zombie.tscn
 ::res://scenes/pickables/::1715295679
 chromosome.tscn::PackedScene::6960222348881714533::1715295679::0::1::::<><>::uid://bojhp66115hia::::res://assets/pickable/icons8-dna-40.png
 ::res://scenes/platforms/::1715295679
 grass_platform.tscn::PackedScene::4396086293126842473::1715295679::0::1::::<><>::uid://cbhfgk6yc2uyo::::res://assets/terrain/platforms.png
 ::res://scripts/::1715295679
-::res://scripts/characters/::1715308305
-bario.gd::GDScript::-1::1715308305::0::1::::<>CharacterBody2D<>::
-zombie.gd::GDScript::-1::1715308276::0::1::::<>CharacterBody2D<>::
+::res://scripts/characters/::1715310608
+bario.gd::GDScript::-1::1715310608::0::1::::<>CharacterBody2D<>::
+zombie.gd::GDScript::-1::1715310564::0::1::::<>CharacterBody2D<>::

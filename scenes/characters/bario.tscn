@@ -153,7 +153,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"death",
-"speed": 10.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -231,7 +231,7 @@ script = ExtResource("1_4syia")
 [node name="animated_sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_42qnb")
-animation = &"atkLeft"
+animation = &"death"
 frame = 3
 frame_progress = 1.0
 
@@ -259,8 +259,13 @@ autostart = true
 wait_time = 0.761
 one_shot = true
 
+[node name="death_timer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true
+
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="body_exited" from="hitbox" to="." method="_on_hitbox_body_exited"]
 [connection signal="timeout" from="damage_timer" to="." method="_on_damage_timer_timeout"]
 [connection signal="timeout" from="damage_cooldown" to="." method="_on_damage_cooldown_timeout"]
+[connection signal="timeout" from="death_timer" to="." method="_on_death_timer_timeout"]

@@ -60,5 +60,4 @@ func _on_area_2d_body_exited(body):
 
 
 func _on_death_timer_timeout():
-	print("now dead")
 	self.queue_free()
