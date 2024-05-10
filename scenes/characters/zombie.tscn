@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bujusctr2j4v5"]
+[gd_scene load_steps=37 format=3 uid="uid://bujusctr2j4v5"]
 
 [ext_resource type="Script" path="res://scripts/characters/zombie.gd" id="1_n65k1"]
 [ext_resource type="Texture2D" uid="uid://yktwji456sll" path="res://assets/characters/Zombie/Walk.png" id="1_pxjom"]
@@ -240,6 +240,9 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8l2c"]
+size = Vector2(17, 24)
+
 [node name="zombie" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 13
@@ -252,7 +255,7 @@ shape = SubResource("RectangleShape2D_h028k")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_afuns")
 animation = &"walkRight"
-frame_progress = 0.399696
+frame_progress = 0.96384
 
 [node name="raycast_left" type="RayCast2D" parent="."]
 target_position = Vector2(-12, 1)
@@ -261,3 +264,9 @@ collision_mask = 9
 [node name="raycast_right" type="RayCast2D" parent="."]
 target_position = Vector2(12, 0)
 collision_mask = 9
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 4)
+shape = SubResource("RectangleShape2D_b8l2c")

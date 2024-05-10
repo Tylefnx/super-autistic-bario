@@ -1,10 +1,10 @@
 CollisionShape2D
 Area2D
+Timer
 TileMap
 RayCast2D
 CharacterBody2D
 NavigationAgent2D
 AnimatedSprite2D
-Timer
 AnimationPlayer
 Sprite2D

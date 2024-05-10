@@ -7,6 +7,7 @@ var dir = "Left"
 const speed = 30.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var direction = Vector2.RIGHT
+var health = 1
 
 func update_animations():
 	if velocity.length() == 0:
