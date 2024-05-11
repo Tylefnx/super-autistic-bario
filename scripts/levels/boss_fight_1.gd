@@ -9,7 +9,7 @@ extends Node2D
 @onready var victory_cutscene = $hud/Control/Label/AnimationPlayer
 @onready var timer = $hud/Control/Label/Timer
 @onready var victr = $hud/Control/Label
-
+@onready var music = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,13 +27,16 @@ func _ready():
 	await dialogue_timer.timeout
 	control.panel_visible(false)
 	muscle_man.transformation.start()
+	label.visible = true
 	muscle_man.animation.play("transformation")
+	music.play()	
 	bario.in_dialog = false
-	dialogue_timer.start()
+	dialogue_timer.start(6)
 	await dialogue_timer.timeout
 	victory()
 	
 func victory():
+	label.visible = false
 	dialogue_line_timer.start()
 	control.panel_visible(true)
 	control.set_label("Bario:\nLOL WHAT A FUCKING RETARD AHAHAHAHH")
@@ -42,6 +45,7 @@ func victory():
 	bario.no_animation = true
 	dialogue_line_timer.start(9)
 	victr.visible = true
+	music.stop()
 	victory_cutscene.play("where")
 	await dialogue_line_timer.timeout
 	get_tree().change_scene_to_file("res://scenes/credits.tscn")

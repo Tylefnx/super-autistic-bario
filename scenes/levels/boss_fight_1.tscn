@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dtm3qv01bknvy"]
+[gd_scene load_steps=18 format=3 uid="uid://dtm3qv01bknvy"]
 
 [ext_resource type="Script" path="res://scripts/levels/boss_fight_1.gd" id="1_pyx0w"]
 [ext_resource type="PackedScene" uid="uid://caiehwkd44ot4" path="res://scenes/characters/bario.tscn" id="2_iso63"]
@@ -9,12 +9,28 @@
 [ext_resource type="PackedScene" uid="uid://cufwa74glelmm" path="res://scenes/elders_place.tscn" id="7_cpaur"]
 [ext_resource type="Texture2D" uid="uid://d0vfrpajf4jfr" path="res://assets/terrain/world_tileset.png" id="8_3ci8m"]
 [ext_resource type="FontFile" uid="uid://b64gdmnwdocqu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_qtepc"]
+[ext_resource type="AudioStream" uid="uid://hdk1yt6a5cv" path="res://assets/musics/deişik.mp3" id="10_nlp8s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j8ucs"]
 font = ExtResource("9_qtepc")
 
 [sub_resource type="LabelSettings" id="LabelSettings_8p5m4"]
 font = ExtResource("9_qtepc")
+
+[sub_resource type="Animation" id="Animation_f1cac"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
 
 [sub_resource type="Animation" id="Animation_edkjg"]
 resource_name = "where"
@@ -30,21 +46,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [6, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 25, 26, 27, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
-}
-
-[sub_resource type="Animation" id="Animation_f1cac"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:visible_characters")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [6]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xu1lp"]
@@ -515,3 +516,6 @@ position = Vector2(1, 1)
 tile_set = SubResource("TileSet_ekiqn")
 format = 2
 layer_0/tile_data = PackedInt32Array(-65538, 393216, 2, -65537, 393216, 2, -131072, 393216, 2, -131071, 393216, 2, -131070, 393216, 2, -131069, 393216, 2, -131068, 393216, 2, -131067, 393216, 2, -131066, 393216, 2, -131065, 393216, 2, -131064, 393216, 2, -131063, 393216, 2, -131062, 393216, 2, -131061, 393216, 2, -131060, 393216, 2, -131059, 393216, 2, -131058, 393216, 2, -131057, 393216, 2, -131056, 393216, 2, -131055, 393216, 2, -131054, 393216, 2, -131053, 393216, 2, -131052, 393216, 2, -131051, 393216, 2, -131050, 393216, 2, -131049, 393216, 2, -131048, 393216, 2, -131047, 393216, 2, -131046, 393216, 2, -131045, 393216, 2, -131044, 393216, 2, -131043, 393216, 2, -131042, 393216, 2)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_nlp8s")

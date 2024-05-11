@@ -17,7 +17,7 @@ func _on_end_stage_body_entered(body):
 	if body.name == "bario":
 		if bario.chromosomes == 83:
 			bario.update_max_health()
-		pass #get_tree().change_scene_to_file("res://scenes/levels/boss_1.tscn")
+		get_tree().change_scene_to_file("res://scenes/levels/boss_fight_1.tscn")
 
 
 func _on_uselesness_body_entered(body):

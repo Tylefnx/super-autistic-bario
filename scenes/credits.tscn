@@ -1,4 +1,16 @@
-[gd_scene format=3 uid="uid://1wwc8shu3e3q"]
+[gd_scene load_steps=6 format=3 uid="uid://1wwc8shu3e3q"]
+
+[ext_resource type="FontFile" uid="uid://b64gdmnwdocqu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_fx7n0"]
+[ext_resource type="FontFile" uid="uid://ybtofid14i5j" path="res://assets/fonts/PixelOperator8.ttf" id="2_3u0fm"]
+[ext_resource type="AudioStream" uid="uid://bepib7hqokuhg" path="res://assets/musics/MARIO THEMESONG FAIL RECORDER COVER.mp3" id="3_omwem"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4fg0e"]
+font = ExtResource("1_fx7n0")
+font_size = 72
+
+[sub_resource type="LabelSettings" id="LabelSettings_mhy0i"]
+font = ExtResource("2_3u0fm")
+font_size = 25
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -17,7 +29,49 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
 offset_left = -557.0
 offset_top = -301.0
 offset_right = 592.0
 offset_bottom = 344.0
+
+[node name="Label" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 40.0
+offset_right = 1149.0
+offset_bottom = 129.0
+text = "CREDITS"
+label_settings = SubResource("LabelSettings_4fg0e")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 130.0
+offset_right = 1148.0
+offset_bottom = 653.0
+text = "Apocalypse Asset Pack: CuddleeBug 
+
+Terrain Assets: Brackeys' Platformer Assets
+
+Even Stronger Normal Guy: Kalann
+
+Shitty Fluted Mario: Rec0rder Mast3r (youtube)
+
+
+Thanks for supporting me 
+at the beginning of my game developing journey :')
+
+
+Every music except one: Tylefnx
+
+Created by: Tylefnx
+
+"
+label_settings = SubResource("LabelSettings_mhy0i")
+horizontal_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_omwem")
+autoplay = true

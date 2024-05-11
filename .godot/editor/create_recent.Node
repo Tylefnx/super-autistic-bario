@@ -1,14 +1,14 @@
+CanvasLayer
+AudioStreamPlayer2D
+Label
 Timer
 AnimationPlayer
 AnimationTree
-Label
 Control
 Panel
-CanvasLayer
 Sprite2D
 RayCast2D
 TileMap
 CollisionShape2D
 Area2D
 AnimatedSprite2D
-CharacterBody2D
