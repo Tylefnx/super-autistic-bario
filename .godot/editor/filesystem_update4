@@ -5,3 +5,4 @@ res://scenes/levels/boss_fight_1.tscn
 res://scripts/levels/stage_1.gd
 res://scenes/dialog.tscn
 res://scripts/dialog.gd
+res://scripts/intro.gd

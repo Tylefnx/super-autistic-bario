@@ -54,7 +54,7 @@ func dialogue():
 	await dialogue_timer.timeout
 	bario_epic_fall.play("throwed")
 	cutscene.play("aaa")
-	run_timer.start(6)
+	run_timer.start(3)
 	await run_timer.timeout
 	get_tree().change_scene_to_file("res://scenes/levels/stage_1.tscn")
 	return
