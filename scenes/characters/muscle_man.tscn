@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cmets4rw1njdt"]
+[gd_scene load_steps=40 format=3 uid="uid://cmets4rw1njdt"]
 
 [ext_resource type="Texture2D" uid="uid://ga7h0y7f3ei7" path="res://assets/characters/muscle_man/RageTransformation.png" id="1_eswky"]
 [ext_resource type="Script" path="res://scripts/characters/muscle_man.gd" id="1_hu2ou"]
@@ -247,13 +247,16 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t8cd8")
 }],
-"loop": true,
+"loop": false,
 "name": &"transformation",
 "speed": 12.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hioy3"]
 size = Vector2(30, 31)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iylws"]
+radius = 11.0454
 
 [node name="muscle_man" type="CharacterBody2D"]
 z_index = 3
@@ -264,26 +267,30 @@ script = ExtResource("1_hu2ou")
 position = Vector2(-4.5, 0)
 scale = Vector2(0.975, 1)
 sprite_frames = SubResource("SpriteFrames_adrnh")
-animation = &"idle"
+animation = &"hit"
 autoplay = "idle"
-frame_progress = 0.969271
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-5, 1)
+collision_layer = 16
+collision_mask = 5
 
 [node name="hurtbox" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1, -0.5)
 shape = SubResource("RectangleShape2D_hioy3")
 
 [node name="muscle_man_shape" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 1)
+shape = SubResource("CircleShape2D_iylws")
 
 [node name="attack_left" type="RayCast2D" parent="."]
 position = Vector2(-5, 1)
 target_position = Vector2(-25, 0)
+collision_mask = 4
 
-[node name="attack_right" type="RayCast2D" parent="."]
-position = Vector2(-5, 1)
-target_position = Vector2(27, 0)
+[node name="transformation" type="Timer" parent="."]
+wait_time = 2.127
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="transformation" to="." method="_on_transformation_timeout"]

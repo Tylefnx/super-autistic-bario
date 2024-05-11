@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dtm3qv01bknvy"]
+[gd_scene load_steps=17 format=3 uid="uid://dtm3qv01bknvy"]
 
 [ext_resource type="Script" path="res://scripts/levels/boss_fight_1.gd" id="1_pyx0w"]
 [ext_resource type="PackedScene" uid="uid://caiehwkd44ot4" path="res://scenes/characters/bario.tscn" id="2_iso63"]
@@ -8,6 +8,50 @@
 [ext_resource type="PackedScene" uid="uid://dv585hetb1ajx" path="res://scenes/dialog.tscn" id="6_dy540"]
 [ext_resource type="PackedScene" uid="uid://cufwa74glelmm" path="res://scenes/elders_place.tscn" id="7_cpaur"]
 [ext_resource type="Texture2D" uid="uid://d0vfrpajf4jfr" path="res://assets/terrain/world_tileset.png" id="8_3ci8m"]
+[ext_resource type="FontFile" uid="uid://b64gdmnwdocqu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="9_qtepc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j8ucs"]
+font = ExtResource("9_qtepc")
+
+[sub_resource type="LabelSettings" id="LabelSettings_8p5m4"]
+font = ExtResource("9_qtepc")
+
+[sub_resource type="Animation" id="Animation_edkjg"]
+resource_name = "where"
+length = 50.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 4.5, 5, 5.5, 9, 10.5, 12, 13.5, 15, 16.5, 18, 19.5, 21, 22.5, 24, 25.5, 27, 28.5, 30, 31.5, 33, 34.5, 36, 37.5, 39, 40.5, 42, 43.5, 45, 47, 49),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 8, 9, 10, 11, 12, 13, 14, 16, 17, 18, 19, 20, 22, 23, 25, 26, 27, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
+}
+
+[sub_resource type="Animation" id="Animation_f1cac"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xu1lp"]
+_data = {
+"RESET": SubResource("Animation_f1cac"),
+"where": SubResource("Animation_edkjg")
+}
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8jx5o"]
 texture = ExtResource("8_3ci8m")
@@ -402,28 +446,65 @@ sources/0 = SubResource("TileSetAtlasSource_8jx5o")
 [node name="boss_fight_1" type="Node2D"]
 script = ExtResource("1_pyx0w")
 
+[node name="bario_camera" parent="." instance=ExtResource("3_nw2uo")]
+position = Vector2(237, -87)
+zoom = Vector2(2, 2)
+
 [node name="muscle_man" parent="." instance=ExtResource("2_sggs3")]
+position = Vector2(357, -85)
+collision_layer = 16
+collision_mask = 5
 
 [node name="bario" parent="." instance=ExtResource("2_iso63")]
 z_index = 2
-position = Vector2(39, -33)
+position = Vector2(53, -30)
+collision_mask = 3
 
-[node name="bario_camera" parent="bario" instance=ExtResource("3_nw2uo")]
-position = Vector2(-7, -23)
+[node name="Label" type="Label" parent="bario"]
+offset_left = -33.0
+offset_top = -74.0
+offset_right = 39.0
+offset_bottom = -39.0
+text = "JUMP
+!!!!!!"
+label_settings = SubResource("LabelSettings_j8ucs")
 
 [node name="hud" parent="." instance=ExtResource("3_q42hl")]
 
 [node name="Control" parent="hud" instance=ExtResource("6_dy540")]
-offset_left = 20.0
-offset_top = -55.0
-offset_right = 20.0
-offset_bottom = -55.0
+offset_left = 9.0
+offset_top = -61.0
+offset_right = 9.0
+offset_bottom = -61.0
 
 [node name="dialogue_timer" type="Timer" parent="hud/Control"]
-wait_time = 12.0
+wait_time = 3.867
 
 [node name="dialogue_line_timer" type="Timer" parent="hud/Control"]
 wait_time = 3.992
+
+[node name="Label" type="Label" parent="hud/Control"]
+layout_mode = 0
+offset_left = -589.0
+offset_top = -37.0
+offset_right = 550.0
+offset_bottom = 46.0
+text = "Bario:
+Wait... Where is The Holy Chromosome???"
+label_settings = SubResource("LabelSettings_8p5m4")
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 6
+visible_ratio = 0.130435
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hud/Control/Label"]
+libraries = {
+"": SubResource("AnimationLibrary_xu1lp")
+}
+speed_scale = 7.0
+
+[node name="Timer" type="Timer" parent="hud/Control/Label"]
+wait_time = 10.0
 
 [node name="elders_place_background" parent="." instance=ExtResource("7_cpaur")]
 position = Vector2(272, -31)

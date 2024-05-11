@@ -227,6 +227,7 @@ size = Vector2(13, 25)
 collision_layer = 4
 collision_mask = 19
 script = ExtResource("1_4syia")
+metadata/_edit_horizontal_guides_ = [-89.0]
 
 [node name="animated_sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
@@ -260,6 +261,9 @@ one_shot = true
 [node name="death_timer" type="Timer" parent="."]
 wait_time = 0.8
 one_shot = true
+
+[node name="hurt_timer" type="Timer" parent="."]
+wait_time = 0.009
 
 [connection signal="timeout" from="attack_timer" to="." method="_on_attack_timer_timeout"]
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

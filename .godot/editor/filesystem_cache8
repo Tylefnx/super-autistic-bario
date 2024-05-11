@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715433662
+::res://::1715437569
 icon.svg::CompressedTexture2D::3398351224969240999::1715295679::1715295679::1::::<><>::
 ::res://assets/::1715295679
 ::res://assets/brackeys_platformer_assets/::1715295679
@@ -163,12 +163,12 @@ hud.tscn::PackedScene::1548137315473231912::1715428335::0::1::::<><>::uid://crqm
 main_menu.tscn::PackedScene::6628526077831317680::1715429692::0::1::::<><>::res://scripts/main_menu.gd<>uid://b64gdmnwdocqu::::res://assets/fonts/PixelOperator8-Bold.ttf<>uid://diwby7j0vmo72::::res://assets/musics/MFFS.mp3<>uid://ybtofid14i5j::::res://assets/fonts/PixelOperator8.ttf
 tutorial.tscn::PackedScene::3507988644346082615::1715428335::0::1::::<><>::uid://b64gdmnwdocqu::::res://assets/fonts/PixelOperator8-Bold.ttf
 world_tilemap.tscn::PackedScene::9062580215261230148::1715428335::0::1::::<><>::uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png
-::res://scenes/characters/::1715433339
-bario.tscn::PackedScene::4789612929085044467::1715432815::0::1::::<><>::res://scripts/characters/bario.gd<>uid://cxcm02s2ooq3v::::res://assets/characters/bario/Stab.png<>uid://bidijd0ks7pjv::::res://assets/characters/bario/Death.png<>uid://dwh6su7wta02g::::res://assets/characters/bario/Idle.png<>uid://sn3k217kflqb::::res://assets/characters/bario/Walk.png
-muscle_man.tscn::PackedScene::5624552319685355557::1715433339::0::1::::<><>::uid://ga7h0y7f3ei7::::res://assets/characters/muscle_man/RageTransformation.png<>res://scripts/characters/muscle_man.gd
+::res://scenes/characters/::1715436164
+bario.tscn::PackedScene::4789612929085044467::1715436164::0::1::::<><>::res://scripts/characters/bario.gd<>uid://cxcm02s2ooq3v::::res://assets/characters/bario/Stab.png<>uid://bidijd0ks7pjv::::res://assets/characters/bario/Death.png<>uid://dwh6su7wta02g::::res://assets/characters/bario/Idle.png<>uid://sn3k217kflqb::::res://assets/characters/bario/Walk.png
+muscle_man.tscn::PackedScene::5624552319685355557::1715436164::0::1::::<><>::uid://ga7h0y7f3ei7::::res://assets/characters/muscle_man/RageTransformation.png<>res://scripts/characters/muscle_man.gd<>uid://b4ao6eviv6mu::::res://assets/characters/muscle_man/RageWalk.png<>uid://bavjmacfsb7p2::::res://assets/characters/muscle_man/RageHitRightFront.png
 zombie.tscn::PackedScene::3810023575592759604::1715320132::0::1::::<><>::res://scripts/characters/zombie.gd<>uid://yktwji456sll::::res://assets/characters/Zombie/Walk.png<>uid://b8aucgq4bw04m::::res://assets/characters/Zombie/Idle.png<>uid://6261jm7al27l::::res://assets/characters/Zombie/Death.png
-::res://scenes/levels/::1715432816
-boss_fight_1.tscn::PackedScene::8519352404544104694::1715432815::0::1::::<><>::res://scripts/levels/boss_fight_1.gd<>uid://caiehwkd44ot4::::res://scenes/characters/bario.tscn<>uid://cmets4rw1njdt::::res://scenes/characters/muscle_man.tscn<>uid://cxme24kj1pcqu::::res://scenes/bario_camera.tscn<>uid://wb6uijuwlrsi::::res://scenes/hud.tscn<>uid://dv585hetb1ajx::::res://scenes/dialog.tscn<>uid://cufwa74glelmm::::res://scenes/elders_place.tscn<>uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png
+::res://scenes/levels/::1715436164
+boss_fight_1.tscn::PackedScene::8519352404544104694::1715436164::0::1::::<><>::res://scripts/levels/boss_fight_1.gd<>uid://caiehwkd44ot4::::res://scenes/characters/bario.tscn<>uid://cmets4rw1njdt::::res://scenes/characters/muscle_man.tscn<>uid://cxme24kj1pcqu::::res://scenes/bario_camera.tscn<>uid://wb6uijuwlrsi::::res://scenes/hud.tscn<>uid://dv585hetb1ajx::::res://scenes/dialog.tscn<>uid://cufwa74glelmm::::res://scenes/elders_place.tscn<>uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png
 intro.tscn::PackedScene::6404561456864408864::1715430575::0::1::::<><>::uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png<>res://scripts/intro.gd<>uid://cufwa74glelmm::::res://scenes/elders_place.tscn<>uid://ga7h0y7f3ei7::::res://assets/characters/muscle_man/RageTransformation.png<>uid://bavjmacfsb7p2::::res://assets/characters/muscle_man/RageHitRightFront.png<>uid://caiehwkd44ot4::::res://scenes/characters/bario.tscn<>uid://b4ao6eviv6mu::::res://assets/characters/muscle_man/RageWalk.png<>uid://ybtofid14i5j::::res://assets/fonts/PixelOperator8.ttf<>uid://bp8kcb4468ret::::res://scenes/tutorial.tscn<>uid://di7wwbcyjnif8::::res://assets/musics/şAJEFRTESER.mp3
 stage_1.tscn::PackedScene::6544751146111702457::1715432816::0::1::::<><>::uid://caiehwkd44ot4::::res://scenes/characters/bario.tscn<>res://scripts/levels/stage_1.gd<>uid://wb6uijuwlrsi::::res://scenes/hud.tscn<>uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png<>uid://dv585hetb1ajx::::res://scenes/dialog.tscn<>uid://b3vq5thgbx3fh::::res://scenes/platforms/grass_platform.tscn<>uid://d2d8mwepwwejs::::res://scenes/world_tilemap.tscn<>uid://cxme24kj1pcqu::::res://scenes/bario_camera.tscn<>uid://bepib7hqokuhg::::res://assets/musics/MARIO THEMESONG FAIL RECORDER COVER.mp3<>uid://c6ft30be76y7n::::res://scenes/pickables/chromosome.tscn<>uid://bujusctr2j4v5::::res://scenes/characters/zombie.tscn<>uid://bp8kcb4468ret::::res://scenes/tutorial.tscn
 ::res://scenes/pickables/::1715362030
@@ -182,12 +182,12 @@ health.gd::GDScript::-1::1715317420::0::1::::<>NinePatchRect<>::
 intro.gd::GDScript::-1::1715430296::0::1::::<>Node2D<>::
 main_menu.gd::GDScript::-1::1715428335::0::1::::<>CanvasLayer<>::
 shud.gd::GDScript::-1::1715314022::0::1::::<>CanvasLayer<>::
-::res://scripts/characters/::1715433339
-bario.gd::GDScript::-1::1715432491::0::1::::<>CharacterBody2D<>::
-muscle_man.gd::GDScript::-1::1715433339::0::1::::<>CharacterBody2D<>::
+::res://scripts/characters/::1715436154
+bario.gd::GDScript::-1::1715434723::0::1::::<>CharacterBody2D<>::
+muscle_man.gd::GDScript::-1::1715436154::0::1::::<>CharacterBody2D<>::
 zombie.gd::GDScript::-1::1715432775::0::1::::<>CharacterBody2D<>::
-::res://scripts/levels/::1715430533
-boss_fight_1.gd::GDScript::-1::1715428335::0::1::::<>Node2D<>::
+::res://scripts/levels/::1715435808
+boss_fight_1.gd::GDScript::-1::1715435808::0::1::::<>Node2D<>::
 stage_1.gd::GDScript::-1::1715430533::0::1::::<>Node2D<>::
 ::res://scripts/pickables/::1715317326
 chromosome.gd::GDScript::-1::1715317326::0::1::::<>Area2D<>::

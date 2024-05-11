@@ -1,6 +1,7 @@
 res://scenes/characters/muscle_man.tscn
-res://scripts/characters/muscle_man.gd
 res://scenes/levels/boss_fight_1.tscn
-res://scripts/characters/bario.gd
-res://scripts/levels/boss_fight_1.gd
 res://scenes/characters/bario.tscn
+res://scripts/levels/boss_fight_1.gd
+res://scripts/characters/muscle_man.gd
+res://scripts/characters/bario.gd
+res://scenes/credits.tscn
