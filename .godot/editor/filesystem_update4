@@ -1,8 +1,6 @@
-res://scenes/levels/stage_1.tscn
-res://scenes/levels/intro.tscn
-res://scenes/main_menu.tscn
+res://scenes/characters/muscle_man.tscn
+res://scripts/characters/muscle_man.gd
 res://scenes/levels/boss_fight_1.tscn
-res://scripts/levels/stage_1.gd
-res://scenes/dialog.tscn
-res://scripts/dialog.gd
-res://scripts/intro.gd
+res://scripts/characters/bario.gd
+res://scripts/levels/boss_fight_1.gd
+res://scenes/characters/bario.tscn

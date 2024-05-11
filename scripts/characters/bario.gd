@@ -39,8 +39,22 @@ func attack(body):
 	if Input.is_action_just_pressed("attack") and barioCanAttack:
 		if body.has_meta("health"):
 			body.health -= 1
-			
 
+func hurt():
+	if dir == "Left":
+		position.x += 10
+	else:
+		position.x -= 10
+func seriously_hurt():
+	var a = 0
+	if dir == "Left":
+		while(a < 20):
+			position.x += 10
+			a += 1
+	else:
+		while(a < 20):
+			position.x -= 10
+			a += 1
 func death():
 	if not bario_dead:
 		if health <= 0 or position.y > 300 or Input.is_action_just_pressed("suicide"):
@@ -94,7 +108,7 @@ func _on_hitbox_body_exited(body):
 
 func _on_damage_timer_timeout():
 	if enemy_can_attack and not bario_dead:
-		print("damage taken")
+		hurt()
 		health -= 1
 
 func _on_damage_cooldown_timeout():

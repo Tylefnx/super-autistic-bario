@@ -34,8 +34,12 @@ func change_direction():
 func take_damage():
 	if not zombie_dead:
 		if Input.is_action_just_pressed("attack") and zombie_can_take_damage:
-			health -= 1
 			zombie_dead = true
+			if dir == "Left":
+				position.x += 10
+			else:
+				position.x -= 10
+			health -= 1
 			death_timer.start()
 		
 func _physics_process(delta):

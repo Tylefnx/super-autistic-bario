@@ -4,13 +4,12 @@ extends Node2D
 func _ready():
 	pass # Replace with function body.
 @onready var bario = $bario
-@onready var panel = $hud/Control/Panel
 @onready var dialog = $hud/Dialog
 @onready var useless_timer = $grass_platform/uselesness/useless_timer
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
