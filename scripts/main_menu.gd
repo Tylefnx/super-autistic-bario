@@ -3,7 +3,7 @@ extends CanvasLayer
 @onready var label = $Control/Panel/Label
 @onready var animation = $Control/Panel/AnimationPlayer
 @onready var timer = $Control/Panel/Timer
-@onready var button = $Button
+@onready var button = $Control2/Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

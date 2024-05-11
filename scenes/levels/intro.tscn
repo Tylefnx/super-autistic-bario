@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://cxiogrl13hiai"]
+[gd_scene load_steps=72 format=3 uid="uid://cxiogrl13hiai"]
 
 [ext_resource type="Texture2D" uid="uid://d0vfrpajf4jfr" path="res://assets/terrain/world_tileset.png" id="1_d5yxw"]
 [ext_resource type="Script" path="res://scripts/intro.gd" id="1_tjbml"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b4ao6eviv6mu" path="res://assets/characters/muscle_man/RageWalk.png" id="3_hnvbn"]
 [ext_resource type="FontFile" uid="uid://b64gdmnwdocqu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="5_4j0gy"]
 [ext_resource type="FontFile" uid="uid://ybtofid14i5j" path="res://assets/fonts/PixelOperator8.ttf" id="6_65ybt"]
+[ext_resource type="AudioStream" uid="uid://di7wwbcyjnif8" path="res://assets/musics/şAJEFRTESER.mp3" id="9_ycppa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fso7x"]
 size = Vector2(16, 17)
@@ -1205,27 +1206,35 @@ zoom = Vector2(3, 3)
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -571.0
+offset_top = -319.0
+offset_right = -531.0
+offset_bottom = -279.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Panel" type="Panel" parent="CanvasLayer/Control"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 480.0
-offset_bottom = 608.0
-grow_horizontal = 2
-grow_vertical = 0
+clip_contents = true
+layout_mode = 0
+offset_top = 496.0
+offset_right = 1156.0
+offset_bottom = 644.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
 
 [node name="Label" type="Label" parent="CanvasLayer/Control/Panel"]
-layout_mode = 0
-offset_right = 1148.0
-offset_bottom = 127.0
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 6.0
+offset_right = 1152.0
+offset_bottom = 1.0
 text = "Bario: aYe b0ss ! habe you seen \"The Holy Chromosome?\""
 label_settings = SubResource("LabelSettings_q4b45")
 horizontal_alignment = 1
@@ -1240,6 +1249,10 @@ libraries = {
 
 [node name="dialogue_timer" type="Timer" parent="CanvasLayer/Control/Panel"]
 wait_time = 5.503
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_ycppa")
+autoplay = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

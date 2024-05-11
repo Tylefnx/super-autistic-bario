@@ -1,10 +1,10 @@
 Control
+AudioStreamPlayer2D
 Timer
 Label
 Button
 Area2D
 AnimationPlayer
-AudioStreamPlayer2D
 Panel
 CanvasLayer
 AnimatedSprite2D
