@@ -9,10 +9,10 @@ const JUMP_VELOCITY = -300.0
 @onready var hitbox = $hitbox
 @onready var damage_cooldown = $damage_cooldown
 @onready var death_timer = $death_timer
-
+var max_health = 3
 var dir = "Right"
 var barioCanAttack = false
-var health = 3
+var health = max_health
 var chromosomes = 0
 var enemy_can_attack = false
 var pressed_attack = false
@@ -36,22 +36,20 @@ func walk():
 			animation.play("idle"+dir)
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 func attack(body):
-	if body.name == "zombie" and not in_dialog:
-		if Input.is_action_just_pressed("attack") and barioCanAttack:
-			if body.has_meta("health"):
-				body.health -= 1
+	if Input.is_action_just_pressed("attack") and barioCanAttack:
+		if body.has_meta("health"):
+			body.health -= 1
 			
 
 func death():
 	if not bario_dead:
-		if health <= 0 or position.y > 300:
+		if health <= 0 or position.y > 300 or Input.is_action_just_pressed("suicide"):
 			bario_dead = true
 			death_timer.start()
 			await death_timer.timeout
 		
 func update_animation():
 	if bario_dead:
-		print("bairo dead")
 		animation.play("death")
 	elif in_dialog:
 		animation.play("idleRight")
@@ -72,7 +70,8 @@ func update_animation():
 				animation.play("walk" + dir)
 func pick_chromosome():
 	chromosomes += 1
-		
+func update_max_health():
+	max_health += 2
 func _physics_process(delta):
 	if not in_dialog:
 		death()

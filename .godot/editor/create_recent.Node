@@ -1,9 +1,11 @@
+TileMap
+CollisionShape2D
+Area2D
 Control
 AudioStreamPlayer2D
 Timer
 Label
 Button
-Area2D
 AnimationPlayer
 Panel
 CanvasLayer
@@ -11,4 +13,3 @@ AnimatedSprite2D
 RichTextLabel
 TextureRect
 Container
-Camera2D

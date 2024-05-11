@@ -7,9 +7,6 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	timer.start()
-	animation.play("title_drop")
-	await timer.timeout
 	animation.play("menu_title")
 	pass # Replace with function body.
 

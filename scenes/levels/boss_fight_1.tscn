@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtm3qv01bknvy"]
+
+[ext_resource type="Script" path="res://scripts/levels/boss_fight_1.gd" id="1_pyx0w"]
+[ext_resource type="PackedScene" uid="uid://caiehwkd44ot4" path="res://scenes/characters/bario.tscn" id="2_iso63"]
+[ext_resource type="PackedScene" uid="uid://cxme24kj1pcqu" path="res://scenes/bario_camera.tscn" id="3_nw2uo"]
+[ext_resource type="PackedScene" uid="uid://wb6uijuwlrsi" path="res://scenes/hud.tscn" id="3_q42hl"]
+[ext_resource type="PackedScene" uid="uid://d2d8mwepwwejs" path="res://scenes/world_tilemap.tscn" id="4_w8ddf"]
+
+[node name="boss_fight_1" type="Node2D"]
+script = ExtResource("1_pyx0w")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="bario" parent="." instance=ExtResource("2_iso63")]
+position = Vector2(95, -38)
+
+[node name="bario_camera" parent="bario" instance=ExtResource("3_nw2uo")]
+position = Vector2(-7, -23)
+
+[node name="hud" parent="." instance=ExtResource("3_q42hl")]
+
+[node name="world" parent="." instance=ExtResource("4_w8ddf")]
+position = Vector2(0, 0)
+layer_0/tile_data = PackedInt32Array(-65532, 0, 0, -65531, 0, 0, -65530, 0, 0, 9, 0, 0, 8, 0, 0, -65529, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0)

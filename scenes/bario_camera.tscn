@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cxme24kj1pcqu"]
+
+[node name="bario_camera" type="Camera2D"]
+position = Vector2(5, -15)
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true

@@ -1,8 +1,10 @@
-res://scenes/
 res://scenes
+res://
+res://scenes/levels
+res://scripts/levels
+res://scenes/
 res://assets/characters/muscle_man
 res://assets/characters/bario
-res://scenes/levels
 res://assets/characters/Zombie
 res://scripts/characters
 res://scenes/characters

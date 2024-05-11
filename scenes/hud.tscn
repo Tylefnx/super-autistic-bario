@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://wb6uijuwlrsi"]
+
+[ext_resource type="PackedScene" uid="uid://crqm2487sjuom" path="res://scenes/chromosome_counter.tscn" id="1_1qj60"]
+[ext_resource type="PackedScene" uid="uid://c6ft30be76y7n" path="res://scenes/pickables/chromosome.tscn" id="2_fm875"]
+
+[node name="hud" type="CanvasLayer"]
+layer = 0
+offset = Vector2(10, 10)
+transform = Transform2D(1, 0, 0, 1, 10, 10)
+
+[node name="chr2" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.356863)
+texture_filter = 1
+offset_right = 247.0
+offset_bottom = 81.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="chromosome_counter" parent="chr2" instance=ExtResource("1_1qj60")]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 29.0
+offset_right = 155.0
+offset_bottom = 62.0
+
+[node name="chromosome" parent="chr2" instance=ExtResource("2_fm875")]
+position = Vector2(-3691.17, -77.3891)

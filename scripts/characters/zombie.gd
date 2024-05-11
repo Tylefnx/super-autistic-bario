@@ -4,6 +4,7 @@ extends CharacterBody2D
 @onready var raycast_right = $raycast_right
 @onready var animation = $AnimatedSprite2D
 @onready var death_timer = $death_timer
+@onready var bario = $"../bario"
 
 var dir = "Left"
 const speed = 30.0
@@ -61,3 +62,4 @@ func _on_area_2d_body_exited(body):
 
 func _on_death_timer_timeout():
 	self.queue_free()
+	bario.chromosomes += 1
