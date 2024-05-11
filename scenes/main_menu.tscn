@@ -1,0 +1,194 @@
+[gd_scene load_steps=11 format=3 uid="uid://c1o54duwuth81"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_l7vxn"]
+[ext_resource type="FontFile" uid="uid://b64gdmnwdocqu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_umtcm"]
+[ext_resource type="AudioStream" uid="uid://diwby7j0vmo72" path="res://assets/musics/MFFS.mp3" id="2_cwmte"]
+[ext_resource type="FontFile" uid="uid://ybtofid14i5j" path="res://assets/fonts/PixelOperator8.ttf" id="3_83bkr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o5dg6"]
+font = ExtResource("1_umtcm")
+font_size = 32
+font_color = Color(1, 0.641748, 0.58665, 1)
+
+[sub_resource type="Animation" id="Animation_ieo33"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0.641748, 0.58665, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.00001, -215)]
+}
+
+[sub_resource type="Animation" id="Animation_s72t2"]
+resource_name = "menu_title"
+length = 1.5
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:label_settings:font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.641748, 0.58665, 1), Color(1, 0.260006, 0.200836, 1), Color(0.898511, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.00497933, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.174533, -0.174533, 0.0, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_f85d1"]
+resource_name = "title_drop"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(3.00001, -215), Vector2(-259, 94.0001), Vector2(7.00006, 183)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.349066, 1.39626, 3.48787e-16]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ft1em"]
+_data = {
+"RESET": SubResource("Animation_ieo33"),
+"menu_title": SubResource("Animation_s72t2"),
+"title_drop": SubResource("Animation_f85d1")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_nneyi"]
+font = ExtResource("3_83bkr")
+
+[node name="main_menu" type="CanvasLayer"]
+script = ExtResource("1_l7vxn")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.005
+offset_bottom = -0.239997
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 3.00001
+offset_top = -215.0
+offset_right = 1155.0
+offset_bottom = -90.0001
+pivot_offset = Vector2(575, 60)
+text = "Super Autistic Bario"
+label_settings = SubResource("LabelSettings_o5dg6")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Panel"]
+libraries = {
+"": SubResource("AnimationLibrary_ft1em")
+}
+
+[node name="Timer" type="Timer" parent="Control/Panel"]
+wait_time = 2.387
+
+[node name="Control" type="Control" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 950.0
+offset_top = 614.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label2" type="Label" parent="Control/Panel/Control"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 13.0
+offset_right = 194.0
+offset_bottom = 36.0
+text = "A Tylefnx game"
+label_settings = SubResource("LabelSettings_nneyi")
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 437.0
+offset_top = 331.0
+offset_right = -414.0
+offset_bottom = -247.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_cwmte")
+autoplay = true
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

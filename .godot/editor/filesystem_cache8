@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1715377623
+::res://::1715388816
 icon.svg::CompressedTexture2D::3398351224969240999::1715295679::1715295679::1::::<><>::
 ::res://assets/::1715295679
 ::res://assets/brackeys_platformer_assets/::1715295679
@@ -128,8 +128,9 @@ MouldyCheeseRegular-WyMWG.ttf::FontFile::1823746186569730014::1681281678::171536
 PixelOperator8-Bold.ttf::FontFile::4622512102044952540::1715295679::1715295679::1::::<><>::
 PixelOperator8.ttf::FontFile::1687775524191455501::1715295679::1715295679::1::::<><>::
 SuperFuntime-3zpLX.ttf::FontFile::5093306147800893502::1691483906::1715368991::1::::<><>::
-::res://assets/musics/::1715302350
+::res://assets/musics/::1715386223
 MARIO THEMESONG FAIL RECORDER COVER.mp3::AudioStreamMP3::2698630938599091252::1715295679::1715302350::1::::<><>::
+MFFS.mp3::AudioStreamMP3::7766294382634243235::1715386187::1715386223::1::::<><>::
 ::res://assets/pickable/::1715316743
 hpTexture1.png::CompressedTexture2D::4871319255007047343::1714725784::1715316743::1::::<><>::
 hpTexture2.png::CompressedTexture2D::5028401666127620323::1714725784::1715316743::1::::<><>::
@@ -213,23 +214,25 @@ choice_menu.gd::GDScript::-1::1715372360::0::1::::DQChoiceMenu<>Control<>::
 ::res://DialogueQuest-956d2629e89d16685dd0b26482cd60f7d044b8ee/addons/dialogue_quest/scripts/ui/dialogue/components/resources/settings/::1715372360
 dialogue_box_settings.gd::GDScript::-1::1715372360::0::1::::DQDialogueBoxSettings<>Resource<>::
 dialogue_player_settings.gd::GDScript::-1::1715372360::0::1::::DQDialoguePlayerSettings<>Resource<>::
-::res://scenes/::1715362030
+::res://scenes/::1715388803
 chromosome_counter.tscn::PackedScene::5999860149280403680::1715362030::0::1::::<><>::res://scripts/chromosome_counter.gd<>uid://bojhp66115hia::::res://assets/pickable/icons8-dna-40.png<>uid://ybtofid14i5j::::res://assets/fonts/PixelOperator8.ttf
 health.tscn::PackedScene::7832974173849007351::1715317534::0::1::::<><>::res://scripts/health.gd<>uid://ybtofid14i5j::::res://assets/fonts/PixelOperator8.ttf
+main_menu.tscn::PackedScene::6628526077831317680::1715388803::0::1::::<><>::res://scripts/main_menu.gd<>uid://b64gdmnwdocqu::::res://assets/fonts/PixelOperator8-Bold.ttf<>uid://diwby7j0vmo72::::res://assets/musics/MFFS.mp3<>uid://ybtofid14i5j::::res://assets/fonts/PixelOperator8.ttf
 ::res://scenes/characters/::1715375145
 bario.tscn::PackedScene::4789612929085044467::1715375145::0::1::::<><>::res://scripts/characters/bario.gd<>uid://cxcm02s2ooq3v::::res://assets/characters/bario/Stab.png<>uid://bidijd0ks7pjv::::res://assets/characters/bario/Death.png<>uid://dwh6su7wta02g::::res://assets/characters/bario/Idle.png<>uid://sn3k217kflqb::::res://assets/characters/bario/Walk.png
 zombie.tscn::PackedScene::3810023575592759604::1715320132::0::1::::<><>::res://scripts/characters/zombie.gd<>uid://yktwji456sll::::res://assets/characters/Zombie/Walk.png<>uid://b8aucgq4bw04m::::res://assets/characters/Zombie/Idle.png<>uid://6261jm7al27l::::res://assets/characters/Zombie/Death.png
-::res://scenes/levels/::1715377434
-intro.tscn::PackedScene::6404561456864408864::1715377434::0::1::::<><>::uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png<>res://scripts/intro.gd<>uid://ga7h0y7f3ei7::::res://assets/characters/muscle_man/RageTransformation.png<>uid://caiehwkd44ot4::::res://scenes/characters/bario.tscn<>uid://b64gdmnwdocqu::::res://assets/fonts/PixelOperator8-Bold.ttf<>uid://ybtofid14i5j::::res://assets/fonts/PixelOperator8.ttf
-stage_1.tscn::PackedScene::6544751146111702457::1715375145::0::1::::<><>::uid://caiehwkd44ot4::::res://scenes/characters/bario.tscn<>uid://crqm2487sjuom::::res://scenes/chromosome_counter.tscn<>uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png<>uid://b3vq5thgbx3fh::::res://scenes/platforms/grass_platform.tscn<>uid://bepib7hqokuhg::::res://assets/musics/MARIO THEMESONG FAIL RECORDER COVER.mp3<>uid://c6ft30be76y7n::::res://scenes/pickables/chromosome.tscn<>uid://bujusctr2j4v5::::res://scenes/characters/zombie.tscn
+::res://scenes/levels/::1715388804
+intro.tscn::PackedScene::6404561456864408864::1715388804::0::1::::<><>::uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png<>res://scripts/intro.gd<>uid://ga7h0y7f3ei7::::res://assets/characters/muscle_man/RageTransformation.png<>uid://bavjmacfsb7p2::::res://assets/characters/muscle_man/RageHitRightFront.png<>uid://caiehwkd44ot4::::res://scenes/characters/bario.tscn<>uid://b4ao6eviv6mu::::res://assets/characters/muscle_man/RageWalk.png<>uid://b64gdmnwdocqu::::res://assets/fonts/PixelOperator8-Bold.ttf<>uid://ybtofid14i5j::::res://assets/fonts/PixelOperator8.ttf
+stage_1.tscn::PackedScene::6544751146111702457::1715388804::0::1::::<><>::uid://caiehwkd44ot4::::res://scenes/characters/bario.tscn<>uid://crqm2487sjuom::::res://scenes/chromosome_counter.tscn<>uid://d0vfrpajf4jfr::::res://assets/terrain/world_tileset.png<>uid://b3vq5thgbx3fh::::res://scenes/platforms/grass_platform.tscn<>uid://bepib7hqokuhg::::res://assets/musics/MARIO THEMESONG FAIL RECORDER COVER.mp3<>uid://c6ft30be76y7n::::res://scenes/pickables/chromosome.tscn<>uid://bujusctr2j4v5::::res://scenes/characters/zombie.tscn
 ::res://scenes/pickables/::1715362030
 chromosome.tscn::PackedScene::6960222348881714533::1715362030::0::1::::<><>::uid://bojhp66115hia::::res://assets/pickable/icons8-dna-40.png<>res://scripts/pickables/chromosome.gd
 ::res://scenes/platforms/::1715295679
 grass_platform.tscn::PackedScene::4396086293126842473::1715295679::0::1::::<><>::uid://cbhfgk6yc2uyo::::res://assets/terrain/platforms.png
-::res://scripts/::1715377270
+::res://scripts/::1715388802
 chromosome_counter.gd::GDScript::-1::1715362025::0::1::::<>NinePatchRect<>::
 health.gd::GDScript::-1::1715317420::0::1::::<>NinePatchRect<>::
-intro.gd::GDScript::-1::1715377270::0::1::::<>Node2D<>::
+intro.gd::GDScript::-1::1715388515::0::1::::<>Node2D<>::
+main_menu.gd::GDScript::-1::1715388802::0::1::::<>CanvasLayer<>::
 shud.gd::GDScript::-1::1715314022::0::1::::<>CanvasLayer<>::
 ::res://scripts/characters/::1715368475
 bario.gd::GDScript::-1::1715368475::0::1::::<>CharacterBody2D<>::
