@@ -1,6 +1,6 @@
-TileMap
 CollisionShape2D
 Area2D
+TileMap
 Control
 AudioStreamPlayer2D
 Timer
@@ -12,4 +12,3 @@ CanvasLayer
 AnimatedSprite2D
 RichTextLabel
 TextureRect
-Container

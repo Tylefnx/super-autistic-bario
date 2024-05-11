@@ -8,3 +8,5 @@ res://scripts/characters/bario.gd
 res://scripts/characters/zombie.gd
 res://scenes/tutorial.tscn
 res://scenes/world_tilemap.tscn
+res://scenes/dialog.tscn
+res://scenes/dialog.gd
