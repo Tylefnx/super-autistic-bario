@@ -1,10 +1,7 @@
 res://scenes/levels/stage_1.tscn
 res://scenes/levels/intro.tscn
 res://scenes/main_menu.tscn
-res://scripts/levels/stage_1.gd
-res://scripts/main_menu.gd
 res://scenes/levels/boss_fight_1.tscn
-res://scripts/characters/bario.gd
-res://scripts/characters/zombie.gd
-res://scenes/tutorial.tscn
-res://scenes/world_tilemap.tscn
+res://scripts/levels/stage_1.gd
+res://scenes/dialog.tscn
+res://scripts/dialog.gd

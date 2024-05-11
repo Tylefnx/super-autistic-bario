@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://c0ildia2t3p10"]
+[gd_scene load_steps=28 format=3 uid="uid://c0ildia2t3p10"]
 
 [ext_resource type="PackedScene" uid="uid://caiehwkd44ot4" path="res://scenes/characters/bario.tscn" id="1_cfxkj"]
 [ext_resource type="Script" path="res://scripts/levels/stage_1.gd" id="1_ke0lv"]
 [ext_resource type="PackedScene" uid="uid://wb6uijuwlrsi" path="res://scenes/hud.tscn" id="2_0sfm0"]
 [ext_resource type="Texture2D" uid="uid://d0vfrpajf4jfr" path="res://assets/terrain/world_tileset.png" id="2_1h7j3"]
+[ext_resource type="PackedScene" uid="uid://dv585hetb1ajx" path="res://scenes/dialog.tscn" id="3_qsuql"]
 [ext_resource type="PackedScene" uid="uid://b3vq5thgbx3fh" path="res://scenes/platforms/grass_platform.tscn" id="3_x1ne7"]
 [ext_resource type="PackedScene" uid="uid://d2d8mwepwwejs" path="res://scenes/world_tilemap.tscn" id="4_gsn40"]
 [ext_resource type="PackedScene" uid="uid://cxme24kj1pcqu" path="res://scenes/bario_camera.tscn" id="4_waipq"]
@@ -181,6 +182,9 @@ _data = {
 "RESET": SubResource("Animation_x6mo6"),
 "useless_platform": SubResource("Animation_osfgt")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrn0w"]
+size = Vector2(29.5, 12)
 
 [sub_resource type="Animation" id="Animation_mx5bu"]
 length = 0.001
@@ -655,6 +659,8 @@ script = ExtResource("1_ke0lv")
 
 [node name="hud" parent="." instance=ExtResource("2_0sfm0")]
 
+[node name="Dialog" parent="hud" instance=ExtResource("3_qsuql")]
+
 [node name="bario" parent="." instance=ExtResource("1_cfxkj")]
 z_index = 10
 position = Vector2(-4056, -605)
@@ -682,6 +688,16 @@ libraries = {
 "": SubResource("AnimationLibrary_6mwfa")
 }
 autoplay = "useless_platform"
+
+[node name="uselesness" type="Area2D" parent="grass_platform"]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="grass_platform/uselesness"]
+position = Vector2(0.25, -2)
+shape = SubResource("RectangleShape2D_lrn0w")
+
+[node name="useless_timer" type="Timer" parent="grass_platform/uselesness"]
+wait_time = 3.992
 
 [node name="grass_platform2" parent="." instance=ExtResource("3_x1ne7")]
 position = Vector2(-2968, 47)
@@ -967,6 +983,7 @@ position = Vector2(65.9596, 30.117)
 
 [node name="end_stage" type="Area2D" parent="."]
 position = Vector2(586, -328)
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="end_stage"]
 position = Vector2(1, 4)
@@ -984,4 +1001,5 @@ text = "Press
 To 
 Pay Respects"
 
+[connection signal="body_entered" from="grass_platform/uselesness" to="." method="_on_uselesness_body_entered"]
 [connection signal="body_entered" from="end_stage" to="." method="_on_end_stage_body_entered"]

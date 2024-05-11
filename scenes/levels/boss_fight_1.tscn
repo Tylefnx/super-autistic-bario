@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtm3qv01bknvy"]
+[gd_scene load_steps=7 format=3 uid="uid://dtm3qv01bknvy"]
 
 [ext_resource type="Script" path="res://scripts/levels/boss_fight_1.gd" id="1_pyx0w"]
 [ext_resource type="PackedScene" uid="uid://caiehwkd44ot4" path="res://scenes/characters/bario.tscn" id="2_iso63"]
 [ext_resource type="PackedScene" uid="uid://cxme24kj1pcqu" path="res://scenes/bario_camera.tscn" id="3_nw2uo"]
 [ext_resource type="PackedScene" uid="uid://wb6uijuwlrsi" path="res://scenes/hud.tscn" id="3_q42hl"]
 [ext_resource type="PackedScene" uid="uid://d2d8mwepwwejs" path="res://scenes/world_tilemap.tscn" id="4_w8ddf"]
+[ext_resource type="PackedScene" uid="uid://dv585hetb1ajx" path="res://scenes/dialog.tscn" id="6_dy540"]
 
 [node name="boss_fight_1" type="Node2D"]
 script = ExtResource("1_pyx0w")
@@ -19,6 +20,12 @@ position = Vector2(95, -38)
 position = Vector2(-7, -23)
 
 [node name="hud" parent="." instance=ExtResource("3_q42hl")]
+
+[node name="Control" parent="hud" instance=ExtResource("6_dy540")]
+offset_left = 20.0
+offset_top = -55.0
+offset_right = 20.0
+offset_bottom = -55.0
 
 [node name="world" parent="." instance=ExtResource("4_w8ddf")]
 position = Vector2(0, 0)
